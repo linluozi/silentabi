@@ -1,0 +1,10 @@
+{
+  "seed": 424242,
+  "count": 80,
+  "abi": "lp64",
+  "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "structs_checked": 80,
+  "padding_bytes_total": 1218,
+  "mismatches": [],
+  "ok": true
+}

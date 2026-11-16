@@ -1,0 +1,2292 @@
+{
+  "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "abi": "lp64",
+  "compiler_flags": [
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "corpus": [
+    "net.h",
+    "proto.h",
+    "db.h"
+  ],
+  "mutations_total": 127,
+  "mutations_compiled_clean": 76,
+  "silent_abi_breaks": 71,
+  "silent_share_of_clean": 0.934211,
+  "by_mutation": {
+    "append_u8": {
+      "total": 13,
+      "compiled_clean": 9,
+      "abi_break": 7,
+      "silent": 7
+    },
+    "append_u64": {
+      "total": 13,
+      "compiled_clean": 4,
+      "abi_break": 4,
+      "silent": 4
+    },
+    "insert_u8_after_first": {
+      "total": 13,
+      "compiled_clean": 9,
+      "abi_break": 9,
+      "silent": 9
+    },
+    "insert_u64_after_first": {
+      "total": 13,
+      "compiled_clean": 4,
+      "abi_break": 4,
+      "silent": 4
+    },
+    "insert_char4_before_last": {
+      "total": 13,
+      "compiled_clean": 9,
+      "abi_break": 8,
+      "silent": 8
+    },
+    "move_first_to_end": {
+      "total": 13,
+      "compiled_clean": 9,
+      "abi_break": 9,
+      "silent": 9
+    },
+    "remove_last": {
+      "total": 13,
+      "compiled_clean": 9,
+      "abi_break": 8,
+      "silent": 8
+    },
+    "widen_to_long": {
+      "total": 13,
+      "compiled_clean": 9,
+      "abi_break": 9,
+      "silent": 9
+    },
+    "retype_last_to_double": {
+      "total": 13,
+      "compiled_clean": 9,
+      "abi_break": 8,
+      "silent": 8
+    },
+    "array_shrink": {
+      "total": 4,
+      "compiled_clean": 2,
+      "abi_break": 2,
+      "silent": 2
+    },
+    "array_grow": {
+      "total": 4,
+      "compiled_clean": 2,
+      "abi_break": 2,
+      "silent": 2
+    },
+    "swap_adjacent": {
+      "total": 2,
+      "compiled_clean": 1,
+      "abi_break": 1,
+      "silent": 1
+    }
+  },
+  "examples": [
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 18,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 14,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 12,
+      "changes": [
+        "removed",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 24,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "array_shrink",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 14,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "padding_changed"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 18,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 14,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 12,
+      "changes": [
+        "removed",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 24,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "array_shrink",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 14,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "array_grow",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "eth_header",
+      "mutation": "swap_adjacent",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 14,
+      "size_new": 14,
+      "changes": [
+        "offset_moved",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 40,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 16,
+      "changes": [
+        "removed",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 32,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "ipv4_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "type_changed",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 10,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 10,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 12,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 8,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 6,
+      "changes": [
+        "removed",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "udp_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 8,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 40,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 24,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 20,
+      "size_new": 20,
+      "changes": [
+        "removed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 32,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "tcp_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 20,
+      "size_new": 32,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 14,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 14,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 12,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 10,
+      "changes": [
+        "removed",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 24,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "net.h",
+      "struct": "dns_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 24,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "append_u8",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "move_first_to_end",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "remove_last",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 12,
+      "changes": [
+        "removed",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "widen_to_long",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "message_header",
+      "mutation": "retype_last_to_double",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "type_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "append_u8",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 28,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "insert_u8_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 28,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 40,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "insert_char4_before_last",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 28,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "move_first_to_end",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "remove_last",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 8,
+      "changes": [
+        "removed",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "widen_to_long",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "retype_last_to_double",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "array_shrink",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "type_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "array_grow",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 28,
+      "changes": [
+        "type_changed",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "payload_entry",
+      "mutation": "swap_adjacent",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "offset_moved",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "append_u8",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 232,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 232,
+      "changes": [
+        "added",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "insert_u8_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 232,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 232,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "insert_char4_before_last",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 232,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "move_first_to_end",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 224,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "remove_last",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 224,
+      "size_new": 224,
+      "changes": [
+        "removed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "widen_to_long",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 232,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "retype_last_to_double",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 232,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "array_shrink",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 200,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "batch_message",
+      "mutation": "array_grow",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 224,
+      "size_new": 248,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "append_u8",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "added"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "append_u64",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "insert_u8_after_first",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "added"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "insert_u64_after_first",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "insert_char4_before_last",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "move_first_to_end",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 16,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "remove_last",
+      "compiled": false,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 16,
+      "changes": [
+        "removed",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "widen_to_long",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "type_changed"
+      ]
+    },
+    {
+      "file": "proto.h",
+      "struct": "tagged_value",
+      "mutation": "retype_last_to_double",
+      "compiled": false,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "type_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "append_u64",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "added",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 40,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 12,
+      "changes": [
+        "removed",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 24,
+      "size_new": 32,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "page_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 24,
+      "size_new": 24,
+      "changes": [
+        "type_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 6,
+      "size_new": 6,
+      "changes": [
+        "added",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "append_u64",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 8,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "insert_u64_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 10,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 6,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 4,
+      "changes": [
+        "removed",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "slot",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 6,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "append_u64",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 12,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "insert_u64_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 24,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 16,
+      "changes": [
+        "added",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 12,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 6,
+      "changes": [
+        "removed",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "align_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "record_header",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 12,
+      "size_new": 16,
+      "changes": [
+        "type_changed",
+        "size_changed",
+        "align_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "append_u8",
+      "compiled": true,
+      "verdict": "SOURCE_ONLY",
+      "abi_break": false,
+      "size_old": 384,
+      "size_new": 384,
+      "changes": [
+        "added",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "append_u64",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 392,
+      "changes": [
+        "added",
+        "size_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "insert_u8_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 384,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "insert_u64_after_first",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 392,
+      "changes": [
+        "added",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "insert_char4_before_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 384,
+      "changes": [
+        "added",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "move_first_to_end",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 384,
+      "changes": [
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "remove_last",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 128,
+      "changes": [
+        "removed",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "widen_to_long",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 384,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "offset_moved",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "retype_last_to_double",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 136,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "array_shrink",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 376,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "size_changed",
+        "padding_changed"
+      ]
+    },
+    {
+      "file": "db.h",
+      "struct": "heap_page",
+      "mutation": "array_grow",
+      "compiled": true,
+      "verdict": "ABI_BREAK",
+      "abi_break": true,
+      "size_old": 384,
+      "size_new": 384,
+      "changes": [
+        "type_changed",
+        "offset_moved",
+        "padding_changed"
+      ]
+    }
+  ]
+}
